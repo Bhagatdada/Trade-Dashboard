@@ -27,15 +27,18 @@ The trade data is sourced from the Ministry of Commerce's Trade Statistics porta
 ```
 project/
 ├── data/
-│   ├── scraped_import_data_2023.xlsx
-│   ├── scraped_export_data_2023.xlsx
-│   ├── cleaned_import_data.xlsx
-│   └── cleaned_export_data.xlsx
+│   ├── Export_trade_data.xlsx
+│   ├── Import_trade_data.xlsx
+│   ├── cleanExport.py
+│   ├── cleanImport.py
+│   ├── cleaned_Export_data.xlsx
+│   └── cleaned_Import_data.xlsx
 ├── scripts/
-│   ├── Import_scrape_year.py
-│   ├── Export_scrape_year.py
-│   ├── clean.py
-│   └── Dashboard.py
+│   ├── dashboard
+│   │   └── app.py
+│   └── scrape
+│       ├── exportScrape.py
+│       └── importScrape.py
 └── README.md
 ```
 
@@ -50,17 +53,18 @@ project/
    ```
 
 2. **Scrape and Clean the Data**  
-   Navigate to the `scripts` directory and run the following scripts:
+   Navigate to the `scripts` directory and `data` directory to run the following scripts:
    ```bash
-   python Import_scrape_year.py
-   python Export_scrape_year.py
-   python clean.py
+   python importScrape.py
+   python Exportcrape.py
+   python cleanExport.py
+   python cleanImport.py
    ```
 
 3. **Start the Dashboard**  
    Run the dashboard script:
    ```bash
-   python Dashboard.py
+   python app.py
    ```
 
 4. **Access the Dashboard**  
